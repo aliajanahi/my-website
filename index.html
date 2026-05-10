@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AquaCare is a clean skincare brand offering hydrating and gentle products.">
+
+    <!-- Page title -->
+    <title>AquaCare</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+   <header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="AquaCare Logo">
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Main content -->
+    <main>
+       
+        <!-- Hero section -->
+        <section id="home">
+            <video autoplay muted loop id="hero-video">
+                <source src="video/water-ripple.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-text">
+                <h1>Pure. Clean. Hydrated.</h1>
+                <p>Advanced skincare for daily use.</p>
+            </div>
+        </section>
+
+<!-- Shop section -->
+<section id="shop" class="product-grid">
+    <h2>Products</h2>
+
+    <form>
+        <label for="skinType">Select Skin Concern:</label>
+        <select id="skinType">
+        <option value="">Options</option>
+        <option value="dry">Dry Skin</option>
+        <option value="oily">Oily Skin</option>
+        <option value="acne">Acne</option>
+        <option value="sensitive">Sensitive Skin</option>
+        </select>
+    </form>
+
+    <!-- Product 1 -->
+    <article>
+        <figure>
+            <img src="images/serum.jpg" alt="La Roche-Posay B5 Serum">
+            <figcaption>La Roche-Posay B5 Serum</figcaption>
+        </figure>
+
+        <p>
+            A soothing serum with Vitamin B5 that helps repair the skin barrier and deeply hydrate sensitive skin.
+        </p>
+
+        <details>
+            <summary>More info</summary>
+            <p>Designed for sensitive and irritated skin.</p>
+        </details>
+
+        <button onclick="addToCart('La Roche-Posay B5 Serum')">Add to Cart</button>
+
+    </article>
+
+    <!-- Product 2 -->
+    <article>
+        <figure>
+            <img src="images/moisturizer.jpg" alt="Laneige Water Bank Blue Hyaluronic Cream">
+            <figcaption>Laneige Water Bank Cream</figcaption>
+        </figure>
+
+        <p>
+            A rich hydrating cream that strengthens the skin barrier and provides long-lasting moisture for soft, plump skin.
+        </p>
+
+        <details>
+            <summary>More info</summary>
+            <p>Deep hydration with hyaluronic acid technology.</p>
+        </details>
+
+        <button onclick="addToCart('Laneige Water Bank Cream')">Add to Cart</button>
+
+    </article>
+
+    <!-- Product 3 -->
+    <article>
+        <figure>
+            <img src="images/cleanser.jpg" alt="Skinfix Gentle Gel Cleanser">
+            <figcaption>Skinfix Gentle Gel Cleanser</figcaption>
+        </figure>
+
+        <p>
+            A gentle cleanser that removes impurities while protecting the skin barrier and keeping skin calm and hydrated.
+        </p>
+
+        <details>
+            <summary>More info</summary>
+            <p>Barrier-safe formula for daily use.</p>
+        </details>
+
+        <button onclick="addToCart('Skinfix Gentle Gel Cleanser')">Add to Cart</button>
+
+    </article>
+
+ <aside>
+    <h3>Skincare Tips</h3>
+    <p>Always hydrate your skin after cleansing to protect your barrier.</p>
+
+    <p>Use SPF daily to prevent dark spots and irritation.</p>
+</aside>
+
+</section>
+
+        <!-- Quiz section -->
+<section id="quiz">
+    <h2>Skin Knowledge Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What helps with dry skin?</p>
+        <label><input type="radio" name="q1" value="wrong"> Clarifying face wash</label>
+        <label><input type="radio" name="q1" value="wrong"> Yogurt</label>
+        <label><input type="radio" name="q1" value="correct"> Hydrating face wash</label>
+
+        <p>2. Which ingredient is best for hydration?</p>
+        <label><input type="radio" name="q2" value="correct"> Hyaluronic acid</label>
+        <label><input type="radio" name="q2" value="wrong"> Fragrance</label>
+        <label><input type="radio" name="q2" value="wrong"> Alcohol</label>
+
+        <p>3. What should sensitive skin avoid?</p>
+        <label><input type="radio" name="q3" value="wrong"> Gentle cleanser</label>
+        <label><input type="radio" name="q3" value="correct"> Strong fragrances</label>
+        <label><input type="radio" name="q3" value="wrong"> Moisturizer</label>
+
+        <p>4. What does a moisturizer do?</p>
+        <label><input type="radio" name="q4" value="wrong"> Dries the skin</label>
+        <label><input type="radio" name="q4" value="wrong"> Removes oil completely</label>
+        <label><input type="radio" name="q4" value="correct"> Locks in hydration</label>
+
+        <button type="button" onclick="checkQuiz()">Check Answers</button>
+
+        <p id="quizResult"></p>
+
+    </form>
+</section>
+
+        <!-- About section -->
+<section id="about">
+    <h2>About Us</h2>
+  <div class="column-text">
+        <p class="intro-text">
+            AquaCare is a clean skincare brand focused on hydration.
+        </p>
+    </div>
+   
+    <!-- Vids -->
+    
+    <div class="reels-container">
+
+        <div class="reel">
+            <video src="video/vid1.mp4" preload="metadata"></video>
+            <button class="play-btn">▶</button>
+        </div>
+
+        <div class="reel">
+            <video src="video/vid2.mp4" preload="metadata"></video>
+            <button class="play-btn">▶</button>
+        </div>
+
+        <div class="reel">
+            <video src="video/vid3.mp4" preload="metadata"></video>
+            <button class="play-btn">▶</button>
+        </div>
+
+    </div>
+    </section>
+
+    <div class="music-player">
+        <audio controls>
+            <source src="audio/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</section>
+
+
+
+
+     <!-- Contact -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+           <form id="contactForm" class="glass-form">
+    <div class="input-box">
+        <input type="text" id="userName" required>
+        <label>Full Name</label>
+        <span id="nameError"></span>
+    </div>
+
+    <div class="input-box">
+        <input type="text" id="userEmail" required>
+        <label>Email</label>
+        <span id="emailError"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+
+    <p id="successMsg"></p>
+
+</form>
+   
+     </section>
+        
+        
+
+
+
+        <!-- Cart -->
+ 
+    <section id="cart">
+        <h2>Your Cart</h2>
+
+        <p>Total Items: <span id="cartCount">0</span></p>
+
+        <ul id="cartItems"></ul>
+    </section>
+
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AquaCare</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
